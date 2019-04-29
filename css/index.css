@@ -62,11 +62,13 @@ header nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-start;
-	padding-top: 30px;
+    padding-top: 30px;
 }
 
 header nav a {
-	padding-top: 10px;
+    padding-top: 10px;
+    color: grey;
+    text-decoration: none;
 }
 
 .tagline section h1 {
@@ -169,4 +171,9 @@ header nav a {
 body {
 	margin-left: 40px;
 	margin-right: 40px;
+}
+
+button {
+    border: 1px solid black;
+    background: white;
 }
