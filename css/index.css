@@ -62,14 +62,14 @@ h1, h2, h3, h4, h5 {
 
 header {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: flex-start;
 	padding-top: 30px;
 }
 
 header nav {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	width: 70%;
 }
 
@@ -186,25 +186,6 @@ button {
     background: white;
 }
 
-@media(max-width: 800px) {
-	header {
-        display: flex;
-        flex-direction: column-reverse;
-		align-items: center;
-		justify-content: space-around;
-	}
-	header nav {
-		width: 90%;
-		align-items: center;
-		padding-top: 30px;
-	}
-	.tagline img {
-		display: none;
-	}
-	.tagline section {
-		padding: 0;
-	}
-}
 
 @media(max-width: 500px) {
     header {
@@ -247,6 +228,27 @@ button {
 	footer {
 		padding-top: 20px;
 		padding-bottom: 20px;
-		margin-bottom: 0px;
+	}
+}
+
+@media(max-width: 800px) {
+	header {
+        display: flex;
+        flex-direction: column-reverse;
+		align-items: center;
+		justify-content: space-around;
+	}
+	header nav {
+		width: 90%;
+		align-items: center;
+		padding-top: 30px;
+	}
+	.tagline img {
+		display: none;
+	}
+	.tagline section {
+		padding: 0;
+	}
+	.top-half {
 	}
 }
