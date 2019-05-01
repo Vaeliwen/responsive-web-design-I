@@ -49,7 +49,7 @@ table {
 
 html, body {
     align-content: center;
-    padding: 10px 1.25%;
+    /* padding: 10px 1.25%; */
     height: 100%;
     font-family: 'Titillium Web', sans-serif;
 }
@@ -58,6 +58,14 @@ h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
     margin-bottom: 15px;
+}
+
+
+/* good practice to add a size constraint so the page doesn't stretch to fill oversized screens */
+
+body {
+	max-width: 960px;  
+	margin: 0 auto;
 }
 
 header {
@@ -176,10 +184,10 @@ header nav a {
 	width: 99%;
 }
 
-body {
-	margin-left: 40px;
+/* body {
+	margin-left: 40px;   
 	margin-right: 40px;
-}
+} */
 
 button {
     border: 1px solid black;
@@ -195,19 +203,24 @@ button {
 	}
 	header nav {
 		flex-direction: column;
-		align-items: center;
+		/* align-items: center; */
+		/* width: 100%; */
 	}
 	header nav a {
-		display: block;
+		/* setting the width will take up the container */
+		width: 100%;  
+		text-align: center;
+		/* display: block; not needed*/ 
 		border-bottom: 1px solid grey;
-		padding-left: 110%;
+		padding: 1rem;
+		/* padding-left: 110%;  with the exception of rare cases (maybe animations) negative margins and >100% typically suggest a more efficient way method for styling should be used.
 		padding-right: 110%;
 		padding-bottom: 20px;
-		padding-top: 20px;
+		padding-top: 20px; */
 	}
 	header nav a:first-child {
 		border-top: 1px solid grey;
-		padding-top: 20px;
+		/* padding-top: 20px; */
 	}
 	.top-half {
 		flex-direction: column;
@@ -239,7 +252,7 @@ button {
 		justify-content: space-around;
 	}
 	header nav {
-		width: 90%;
+		width: 100%;
 		align-items: center;
 		padding-top: 30px;
 	}
