@@ -1,3 +1,267 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    align-content: center;
+    /* padding: 10px 1.25%; */
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
 
 
+/* good practice to add a size constraint so the page doesn't stretch to fill oversized screens */
+
+body {
+	max-width: 960px;  
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding-top: 30px;
+}
+
+header nav {
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+}
+
+header nav a {
+    padding-top: 10px;
+    color: grey;
+    text-decoration: none;
+}
+
+.tagline section h1 {
+	font-size: 75px;
+}
+
+.tagline section button {
+	width: 130px;
+	height: 25px;
+}
+
+.tagline section {
+	padding-top: 65px;
+	padding-right: 100px;
+	text-align: center;
+}
+
+.tagline {
+	display: flex;
+	flex-direction: row;
+	align-content: flex-start;
+	justify-content: center;
+	padding: 100px;
+	border-bottom: 2px solid black;
+}
+
+.top-half {
+	display: flex;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.top-half section {
+	display: flex;
+	flex-direction: column;
+}
+
+.bottom-half {
+	display: flex;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	border-bottom: 2px solid black;
+}
+
+.bottom-half section {
+	display: flex;
+	flex-direction: column;
+}
+
+.copyright {
+	text-align: center;
+	margin: 50px;
+}
+
+.services-header-img {
+	margin: 50px;
+}
+
+.services {
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	border-bottom: 2px solid black;
+}
+
+.boxes {
+	display: flex;
+}
+
+.boxes section {
+	padding: 10px;
+	border: 2px solid black;
+	margin: 10px;
+}
+
+.facts {
+	display: flex;
+	border-top: 2px solid black;
+	margin-top: 50px;
+	padding-top: 50px;
+	justify-content: space-around;
+}
+
+.facts section {
+	width: 40%;
+}
+
+.facts section ul li {
+	margin: 10px;
+	list-style-type: square;
+}
+
+.middle-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 99%;
+}
+
+/* body {
+	margin-left: 40px;   
+	margin-right: 40px;
+} */
+
+button {
+    border: 1px solid black;
+    background: white;
+}
+
+
+@media(max-width: 500px) {
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+		align-items: center;
+	}
+	header nav {
+		flex-direction: column;
+		/* align-items: center; */
+		/* width: 100%; */
+	}
+	header nav a {
+		/* setting the width will take up the container */
+		width: 100%;  
+		text-align: center;
+		/* display: block; not needed*/ 
+		border-bottom: 1px solid grey;
+		padding: 1rem;
+		/* padding-left: 110%;  with the exception of rare cases (maybe animations) negative margins and >100% typically suggest a more efficient way method for styling should be used.
+		padding-right: 110%;
+		padding-bottom: 20px;
+		padding-top: 20px; */
+	}
+	header nav a:first-child {
+		border-top: 1px solid grey;
+		/* padding-top: 20px; */
+	}
+	.top-half {
+		flex-direction: column;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+	.top-half section {
+		padding-bottom: 40px;
+	}
+	.bottom-half {
+		flex-direction: column;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+	.bottom-half section {
+		padding-bottom: 40px;
+	}
+	footer {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+@media(max-width: 800px) {
+	header {
+        display: flex;
+        flex-direction: column-reverse;
+		align-items: center;
+		justify-content: space-around;
+	}
+	header nav {
+		width: 100%;
+		align-items: center;
+		padding-top: 30px;
+	}
+	.tagline img {
+		display: none;
+	}
+	.tagline section {
+		padding: 0;
+	}
+	.top-half {
+	}
+}
